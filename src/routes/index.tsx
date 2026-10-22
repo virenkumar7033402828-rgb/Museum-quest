@@ -387,9 +387,18 @@ function MissionView({
 
       <div className="exhibit-card overflow-hidden">
         <div className="flex items-start gap-4 border-b border-carbon/12 bg-carbon/[0.03] px-5 py-5 sm:px-8">
-          <span className="grid h-14 w-14 shrink-0 place-items-center rounded-sm border border-brass/45 bg-parchment text-brass">
-            <ExhibitGlyph kind={mission.icon} className="h-7 w-7" />
-          </span>
+         {mission.imageUrl ? (
+  <img
+    src={mission.imageUrl}
+    alt={mission.object}
+    className="h-24 w-24 shrink-0 rounded-sm border border-carbon/15 bg-parchment object-contain sm:h-32 sm:w-32"
+    loading="lazy"
+  />
+) : (
+  <span className="grid h-14 w-14 shrink-0 place-items-center rounded-sm border border-brass/45 bg-parchment text-brass">
+    <ExhibitGlyph kind={mission.icon} className="h-7 w-7" />
+  </span>
+)}
           <div className="min-w-0">
             <h2
               id="mission-heading"

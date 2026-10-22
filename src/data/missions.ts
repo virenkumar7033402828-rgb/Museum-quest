@@ -1,5 +1,7 @@
 export type Mission = {
-  id: number;
+  id: number; 
+  imageUrl?: 
+  string;
   /** Short exhibit-label title, e.g. "The Stone That Spoke Three Times" */
   title: string;
   /** The object the label belongs to */
@@ -26,6 +28,7 @@ export type Mission = {
 export const MISSIONS: Mission[] = [
   {
     id: 1,
+    imageUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Rosetta_stone.jpg",
     title: "The Stone That Spoke Three Times",
     object: "The Rosetta Stone",
     kicker: "Gallery I · Stone",
@@ -50,6 +53,7 @@ export const MISSIONS: Mission[] = [
   },
   {
     id: 2,
+    imageUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Mechanism_of_Antikythera,_150-100_BC,_NAMA,_191431.jpg",
     title: "The Bronze Computer in the Sea",
     object: "The Antikythera Mechanism",
     kicker: "Gallery II · Bronze",
@@ -78,6 +82,7 @@ export const MISSIONS: Mission[] = [
   },
   {
     id: 3,
+    imageUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Otzi-Quinson.jpg",
     title: "The Traveller in the Ice",
     object: "Ötzi the Iceman",
     kicker: "Gallery III · Ice",
